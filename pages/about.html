@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acerca de — Nexus Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/about.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">NEXUS<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="create.html">Nueva Publicación</a></li>
+      <li><a href="about.html" class="active">Acerca de</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger">&#9776;</button>
+  </nav>
+
+  <main class="about-page">
+    <div class="about-hero">
+      <p class="hero-eyebrow">¿Qué es esto?</p>
+      <h1>Acerca de <em>Nexus</em></h1>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-icon">✦</div>
+        <h3>Nuestra misión</h3>
+        <p>Nexus es una plataforma de blog dinámica construida sobre la API de DummyJSON como parte del curso de Sistemas y Tecnologías Web de la Universidad del Valle de Guatemala.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">⬡</div>
+        <h3>Tecnologías</h3>
+        <p>HTML5 semántico, CSS con variables y diseño responsive, JavaScript modular con ES Modules, DummyJSON API para publicaciones y usuarios.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">◈</div>
+        <h3>Funcionalidades</h3>
+        <p>Listado con paginación, búsqueda y filtros avanzados, detalle de publicación, formulario con validación, eliminación visual y experiencia de usuario fluida.</p>
+      </div>
+    </div>
+
+    <div class="stats-section">
+      <h2>Estadísticas de la plataforma</h2>
+      <div class="stats-grid" id="statsGrid">
+        <div class="stat-card">
+          <span class="stat-number" id="statPosts">—</span>
+          <span class="stat-label">Publicaciones</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="statUsers">—</span>
+          <span class="stat-label">Autores</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="statTags">—</span>
+          <span class="stat-label">Etiquetas únicas</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="statLikes">—</span>
+          <span class="stat-label">Reacciones totales</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Nexus Blog · Sistemas y Tecnologías Web · UVG</p>
+  </footer>
+
+  <script type="module" src="../js/about.js"></script>
+</body>
+</html>

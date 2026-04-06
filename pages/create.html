@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nueva Publicación — Nexus Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/form.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">NEXUS<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="create.html" class="active">Nueva Publicación</a></li>
+      <li><a href="about.html">Acerca de</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger">&#9776;</button>
+  </nav>
+
+  <main class="form-page">
+    <div class="form-header">
+      <p class="form-eyebrow">Comparte tu historia</p>
+      <h1>Nueva <em>Publicación</em></h1>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+
+    <div class="form-card">
+      <div id="fieldTitle" class="field-group">
+        <label for="postTitle">Título *</label>
+        <input type="text" id="postTitle" placeholder="Un título que enganche..." maxlength="120" />
+        <span class="field-error" id="errorTitle"></span>
+        <span class="char-count" id="charTitle">0 / 120</span>
+      </div>
+
+      <div id="fieldBody" class="field-group">
+        <label for="postBody">Contenido *</label>
+        <textarea id="postBody" placeholder="Escribe tu publicación aquí (mínimo 20 caracteres)..." rows="8"></textarea>
+        <span class="field-error" id="errorBody"></span>
+      </div>
+
+      <div id="fieldTags" class="field-group">
+        <label for="postTags">Etiquetas (separadas por coma) *</label>
+        <input type="text" id="postTags" placeholder="tecnología, ciencia, cultura..." />
+        <span class="field-error" id="errorTags"></span>
+      </div>
+
+      <div id="fieldUser" class="field-group">
+        <label for="postUserId">ID de usuario *</label>
+        <input type="number" id="postUserId" placeholder="Ej: 1" min="1" max="100" />
+        <span class="field-error" id="errorUser"></span>
+      </div>
+
+      <div class="form-actions">
+        <button id="submitPost" class="btn-primary">Publicar</button>
+        <button id="resetForm" class="btn-outline">Limpiar</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Nexus Blog · Sistemas y Tecnologías Web · UVG</p>
+  </footer>
+
+  <script type="module" src="../js/create.js"></script>
+</body>
+</html>

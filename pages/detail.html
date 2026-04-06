@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalle — Nexus Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/detail.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">NEXUS<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="create.html">Nueva Publicación</a></li>
+      <li><a href="about.html">Acerca de</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger">&#9776;</button>
+  </nav>
+
+  <div id="toast" class="toast hidden"></div>
+  <div id="loadingIndicator" class="loading-spinner">
+    <div class="spinner"></div>
+    <p>Cargando publicación...</p>
+  </div>
+  <div id="errorMsg" class="error-box hidden"></div>
+
+  <main id="detailContainer" class="detail-container hidden"></main>
+  
+  <script type="module" src="../js/detail.js"></script>
+</body>
+</html>
