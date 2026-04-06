@@ -1,0 +1,17 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (si usan un servidor local)
+node_modules/
+package-lock.json
+
+# Variables de entorno
+.env
+.env.local
