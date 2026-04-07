@@ -1,14 +1,13 @@
-/* ===== js/home.js — home page controller ===== */
 
 import { fetchPosts, fetchPostsByTag, fetchPostsByUser, searchPosts, fetchTags, fetchUsers } from './api/posts.js';
 import { setLoading, showError, hideError, showToast } from './ui/feedback.js';
 import { renderPostCards, renderPagination } from './ui/render.js';
 import { debounce, initNavMenu, saveSession, loadSession } from './utils/helpers.js';
 
-/* ── Constants ── */
+/* Constants */
 const PAGE_SIZE = 9;
 
-/* ── State ── */
+/* State */
 let allPosts    = [];
 let totalPosts  = 0;
 let currentPage = 1;
@@ -19,14 +18,14 @@ let activeTag    = '';
 let activeUser   = '';
 let activeSort   = 'default';
 
-/* ── DOM refs ── */
+/* DOM refs */
 const searchInput  = document.getElementById('searchInput');
 const tagFilter    = document.getElementById('tagFilter');
 const userFilter   = document.getElementById('userFilter');
 const sortFilter   = document.getElementById('sortFilter');
 const clearBtn     = document.getElementById('clearFilters');
 
-/* ── Init ── */
+/* Init */
 initNavMenu();
 bootstrap();
 
@@ -40,7 +39,7 @@ async function bootstrap() {
   }
 }
 
-/* ── Load tags into select ── */
+/* Load tags into select */
 async function loadTags() {
   try {
     const tags = await fetchTags();
@@ -56,7 +55,7 @@ async function loadTags() {
   } catch (_) { /* non-critical */ }
 }
 
-/* ── Load users into select ── */
+/* Load users into select */
 async function loadUsers() {
   try {
     const data = await fetchUsers(30);
@@ -70,7 +69,7 @@ async function loadUsers() {
   } catch (_) { /* non-critical */ }
 }
 
-/* ── Load / render a page ── */
+/* Load / render a page */
 async function loadPage(page) {
   currentPage = page;
   setLoading(true);
@@ -140,7 +139,6 @@ async function loadPage(page) {
   }
 }
 
-/* ── Delete (visual simulation) ── */
 function bindDeleteButtons() {
   document.querySelectorAll('.btn-delete').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -168,7 +166,6 @@ function bindDeleteButtons() {
   });
 }
 
-/* ── Filters & search ── */
 const debouncedSearch = debounce(async (val) => {
   activeSearch = val.trim();
   activeTag    = '';
