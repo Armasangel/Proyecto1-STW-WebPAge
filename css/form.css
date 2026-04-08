@@ -1,0 +1,95 @@
+/* ===== FORM.CSS ===== */
+
+.form-page {
+  max-width: 660px;
+  margin: 3rem auto;
+  padding: 0 2rem 4rem;
+}
+
+.form-header { margin-bottom: 2.5rem; }
+
+.form-eyebrow {
+  font-size: .78rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .6rem;
+  font-weight: 500;
+}
+
+.form-header h1 {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+}
+.form-header h1 em { font-style: italic; color: var(--muted); }
+
+.form-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  position: relative;
+}
+
+.field-group label {
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: .2px;
+}
+
+.field-group input,
+.field-group textarea {
+  padding: .75rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--ff-body);
+  font-size: .9rem;
+  color: var(--ink);
+  background: var(--paper);
+  outline: none;
+  transition: border-color .2s;
+  resize: vertical;
+}
+
+.field-group input:focus,
+.field-group textarea:focus { border-color: var(--accent); }
+
+.field-group.has-error input,
+.field-group.has-error textarea { border-color: var(--accent); }
+
+.field-error {
+  font-size: .78rem;
+  color: var(--accent);
+  min-height: 1rem;
+  display: block;
+}
+
+.char-count {
+  font-size: .75rem;
+  color: var(--muted);
+  text-align: right;
+}
+
+.form-actions {
+  display: flex;
+  gap: .75rem;
+  padding-top: .5rem;
+}
+
+@media (max-width: 600px) {
+  .form-page { padding: 0 1.25rem 3rem; margin-top: 1.5rem; }
+  .form-card { padding: 1.5rem; }
+  .form-actions { flex-direction: column; }
+  .form-actions button { width: 100%; }
+}

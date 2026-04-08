@@ -1,0 +1,153 @@
+/* ===== DETAIL.CSS ===== */
+
+.detail-container {
+  max-width: 780px;
+  margin: 3rem auto;
+  padding: 0 2rem 4rem;
+}
+.detail-container.hidden { display: none; }
+
+.detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  color: var(--muted);
+  font-size: .85rem;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  transition: color .2s;
+}
+.detail-back:hover { color: var(--ink); }
+
+.detail-header { margin-bottom: 2rem; }
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-bottom: 1rem;
+}
+
+.detail-title {
+  font-family: var(--ff-display);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 1.25rem;
+}
+
+.detail-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: .82rem;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+
+.detail-author-chip {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.detail-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.detail-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.75rem 0;
+}
+
+.detail-body {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #2a2825;
+}
+
+.detail-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.detail-stat {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .82rem;
+  color: var(--muted);
+  background: var(--cream);
+  padding: .4rem .9rem;
+  border-radius: 100px;
+}
+
+.detail-actions {
+  display: flex;
+  gap: .75rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.comments-section {
+  margin-top: 3rem;
+}
+
+.comments-section h3 {
+  font-family: var(--ff-display);
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--ink);
+}
+
+.comment-card {
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.4rem;
+  margin-bottom: .85rem;
+  animation: fadeUp .3s ease both;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: .5rem;
+}
+
+.comment-author {
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.comment-email {
+  font-size: .75rem;
+  color: var(--muted);
+}
+
+.comment-body {
+  font-size: .875rem;
+  color: #3a3835;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .detail-container { padding: 0 1.25rem 3rem; margin-top: 1.5rem; }
+}
